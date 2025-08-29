@@ -1,0 +1,8 @@
+You : hi i am stressed about my exams
+Bot : Stress can be really challenging. It's important to take care of yourself. What do you think is causing your stress?
+You : & c:/users/wwwse/appdata/local/programs/python/python313/python.exe c:/users/wwwse/mental-health-chatbot/rule-based-chatbot/chatflow.py
+Bot : I'm here to listen. Can you tell me more about how you're feeling?
+You : hello i am stressed about my exams
+Bot : Stress can be really challenging. It's important to take care of yourself. What do you think is causing your stress?
+You : but i am happy thinking about my holidays
+Bot : That's great to hear! It's always nice to have good days. What has been making you feel happy?

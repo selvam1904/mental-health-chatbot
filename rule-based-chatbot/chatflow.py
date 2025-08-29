@@ -20,34 +20,50 @@ track_mood={"sad":0,"depress":0,"happy":0,"good":0,"angry":0,"frustrate":0,"anxi
 
 print("Bot : Hello! I am your mental health companion.. How can I assist you today?")
 
-while True:
-    user=input("You : ").lower()
+with open("chat_history.txt","a") as f:
+    while True:
+        user=input("You : ").lower()
 
-    if "quit" in user:
-        print("Bot :",responses["bye"])
-        break
+        if "quit" in user:
+            print("Bot : ",responses["bye"])
+            break
     
-    elif "exit" in user:
-        print("Bot :",responses["bye"])
-        break
+        elif "exit" in user:
+            print("Bot : ",responses["bye"])
+            break
 
-    elif "bye" in user:
-        print("Bot :",responses["bye"])
-        break
+        elif "bye" in user:
+            print("Bot : ",responses["bye"])
+            break
+        
+        bot_reply=""
+        response_found=False
+        for keyword in responses:
+            if keyword in user:
 
-    response_found=False
-    for keyword in responses:
-        if keyword in user:
-            print("Bot :",responses[keyword])
-            response_found=True
-            track_mood[keyword]+=1
+                if keyword in ["sad","depress","angry","frustrate","anxious","nervous","stress","overwhelm"]:
+                    if track_mood[keyword]>=3:
+                        bot_reply="It seems like you're going through a tough time. It might be helpful to talk to a mental health professional who can provide you with the support you need."
+                        print("Bot : "+bot_reply)
+                        response_found=True
+                        break
 
-            if keyword in ["sad","depress","angry","frustrate","anxious","nervous","stress","overwhelm"]:
-                if track_mood[keyword]>=3:
-                    print("Bot : It seems like you're going through a tough time. Remember, it's okay to seek professional help if you need it.Meditation and deep breathing exercises can also help manage emotions.")
-            elif keyword in ["happy","good"]:
-                if track_mood[keyword]>=3:
-                    print("Bot : I'm glad to hear that you're feeling good! Keep doing what makes you happy and take time to appreciate the positive moments in your life.")
+                elif keyword in ["happy","good"]:
+                    if track_mood[keyword]>=3:
+                        bot_reply="I'm glad to hear that you're feeling good! Keep doing what makes you happy and take time to appreciate the positive moments in your life."
+                        print("Bot : "+bot_reply)
+                        response_found=True
+                        break
 
-    if not response_found:
-        print("Bot : I'm here to listen. Can you tell me more about how you're feeling?")
+                bot_reply=responses[keyword]
+                print("Bot : "+bot_reply)
+                response_found=True
+                track_mood[keyword]+=1
+                break
+
+        if not response_found:
+            bot_reply="I'm here to listen. Can you tell me more about how you're feeling?"
+            print("Bot : "+bot_reply)
+
+        f.write("You : "+user+"\n")
+        f.write("Bot : "+bot_reply+"\n")
