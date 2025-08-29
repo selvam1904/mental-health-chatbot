@@ -6,3 +6,19 @@ You : hello i am stressed about my exams
 Bot : Stress can be really challenging. It's important to take care of yourself. What do you think is causing your stress?
 You : but i am happy thinking about my holidays
 Bot : That's great to hear! It's always nice to have good days. What has been making you feel happy?
+You : stress
+Bot : Stress can be really challenging. It's important to take care of yourself. What do you think is causing your stress?
+You : stress
+Bot : It might be helpful to talk to a mental health professional who can provide strategies to cope with stress effectively.
+You : stress
+Bot :  Finding ways to manage stress is crucial. Have you tried any relaxation techniques, such as deep breathing, meditation, or physical exercise?
+You : good
+Bot : That's great to hear! It's always nice to have good days. What has been making you feel happy?
+You : good
+Bot : That's great to hear! It's always nice to have good days. What has been making you feel happy?
+You : good
+Bot : That's great to hear! It's always nice to have good days. What has been making you feel happy?
+You : sad
+Bot : I'm sorry to hear that you're feeling this way. It's important to talk about it. Would you like to share more about what's been bothering you?
+You : sad
+Bot : It might help to talk to a trusted friend or family member about how you're feeling. You're not alone, and there are people who care about you.
